@@ -1,0 +1,7 @@
+
+znapzend service can be enabled by setting znapzend_enable="YES" in /etc/rc.conf
+
+Before starting the service you must configure at least backup
+using znapzendzetup, see the manual page for more info.
+
+

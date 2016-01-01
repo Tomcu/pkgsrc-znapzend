@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# $FreeBSD$
+#
+# PROVIDE: znapzend
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# znapzend_enable (bool):	Set to NO by default.
+#				Set it to YES to enable doormand.
+
+. /etc/rc.subr
+
+name=znapzend
+rcvar=znapzend_enable
+
+load_rc_config $name
+
+: ${znapzend_enable:="NO"}
+
+command=%%PREFIX%%/bin/${name}
+pidfile=/var/run/${name}.pid
+
+command_args="--daemonize --pidfile $pidfile"
+
+run_rc_command "$1"
+
