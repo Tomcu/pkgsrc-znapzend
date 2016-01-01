@@ -2,7 +2,7 @@
 
 PORTNAME=	znapzend
 PORTVERSION=	0.14.1
-CATEGORIES=	misc
+CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/oetiker/znapzend/releases/download/v0.14.1/
 
 MAINTAINER=	thomasrcurry@gmail.com
