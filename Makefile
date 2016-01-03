@@ -20,4 +20,7 @@ GNU_CONFIGURE=	yes
 
 USE_RC_SUBR=	znapzend
 
+MAKE_FLAGS=	-e
+MAKE_ENV=	MAKE=gmake
+
 .include <bsd.port.mk>
